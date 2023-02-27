@@ -1,0 +1,22 @@
+ def isPalindrome(self, x):
+        def reverse(s):
+            str=""
+            for i in s:
+                str=i+str
+            return str
+        z=str(x)
+        n=len(z)
+        if n%2==0 and z[0:n//2]==reverse(z[n//2:]):
+            return True
+        if n%2!=0 and z[0:n//2]==reverse(z[n//2+1:]):
+            return True
+        else:
+            return False
+
+
+        """
+
+
+        :type x: int
+        :rtype: bool
+        """
