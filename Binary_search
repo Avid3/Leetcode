@@ -1,0 +1,25 @@
+Created on Sun Feb 26 15:57:24 2023
+
+@author: ameyv
+"""
+"x is in ascending order"
+def bin_search(x,search_val):
+    n=len(x)
+    if n==1 and x[0]!=search_val:
+        return False
+    if n==1 and x[0]==search_val:
+        return True
+    if n>1 and x[n//2]==search_val:
+        return True
+    else:
+        if n>1 and n%2==0 and x[n//2]==search_val:
+            return true
+ 
+        if n>1 and n%2==0 and x[n//2]>search_val:
+            return bin_search(x[0:n//2],search_val)
+        if n>1 and n%2==0 and x[n//2]<search_val:
+            return bin_search(x[n//2:], search_val)
+        if n>1 and n%2!=0 and x[n//2]>search_val:
+            return bin_search(x[0:n//2],search_val)
+        if n>1 and n%2!=0 and x[n//2]<search_val:
+            return bin_search(x[n//2:],search_val)
